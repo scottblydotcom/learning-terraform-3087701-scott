@@ -70,6 +70,7 @@ module "alb" {
         }
       }
     }
+  ]
   
   http_tcp_listeners = [
     {
@@ -82,7 +83,7 @@ module "alb" {
   tags = {
     Environment = "Dev"
   }
-]
+
 }
 module "blog_sg" {
   source  = "terraform-aws-modules/security-group/aws"
